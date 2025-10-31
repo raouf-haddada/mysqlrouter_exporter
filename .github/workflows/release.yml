@@ -21,6 +21,7 @@ jobs:
           args: release --clean
         env:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
+          GOTOOLCHAIN: local
 
   container_release:
     name: Container Release
