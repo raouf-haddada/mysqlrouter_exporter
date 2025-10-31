@@ -10,6 +10,8 @@ jobs:
   binary_release:
     name: Binary Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-go@v6
@@ -21,8 +23,7 @@ jobs:
           version: latest
           args: release --clean
         env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
-          GOTOOLCHAIN: local
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   container_release:
     name: Container Release
