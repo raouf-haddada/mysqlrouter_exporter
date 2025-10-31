@@ -31,7 +31,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/rluisr/mysqlrouter_exporter
+          images: ghcr.io/raouf-haddada/mysqlrouter_exporter
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx

@@ -24,6 +24,6 @@ archives:
   - name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}"
 release:
   github:
-    owner: rluisr
+    owner: raouf-haddada
     name: mysqlrouter_exporter
   prerelease: false

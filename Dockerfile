@@ -11,10 +11,10 @@ RUN apk --no-cache add git openssh build-base
 RUN go build -ldflags "-X main.version=${VERSION} -X main.commit=${COMMIT} -X main.date=${DATE}" -o app .
 
 FROM alpine as production
-LABEL maintainer="rluisr" \
-  org.opencontainers.image.url="https://github.com/rluisr/mysqlrouter_exporter" \
-  org.opencontainers.image.source="https://github.com/rluisr/mysqlrouter_exporter" \
-  org.opencontainers.image.vendor="rluisr" \
+LABEL maintainer="raouf-haddada" \
+  org.opencontainers.image.url="https://github.com/raouf-haddada/mysqlrouter_exporter" \
+  org.opencontainers.image.source="https://github.com/raouf-haddada/mysqlrouter_exporter" \
+  org.opencontainers.image.vendor="raouf-haddada" \
   org.opencontainers.image.title="mysqlrouter_exporter" \
   org.opencontainers.image.description="Prometheus exporter for MySQL Router." \
   org.opencontainers.image.licenses="AGPL"
